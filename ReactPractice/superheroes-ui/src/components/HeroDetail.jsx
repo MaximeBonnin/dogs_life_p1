@@ -6,11 +6,13 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 
 const HeroDetail = (props) => {
-    const[counter, setCounter] = useState(0);
-    
     const incrementCounter =()=>{
         setCounter(counter+1);
+        props.parentCount(props.info.alias);
     }
+    const[counter, setCounter] = useState(0);
+    console.log(props)
+    
   return (
     <Card >
       <div className="imgContainer">
